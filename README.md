@@ -11,7 +11,7 @@ This documentation covers the available MDX components and their usage. These co
 
 ## Usefull links
 
-- [Lucid icons](https://lucide.dev/icons/book-open-text)
+- <a href="https://lucide.dev/icons" target="_blank">Lucid icons</a>
 
 ## Tab Group & Tabs
 
