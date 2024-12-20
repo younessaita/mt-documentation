@@ -9,6 +9,10 @@ This documentation covers the available MDX components and their usage. These co
 - [List](#list)
 - [Feature With Icon](#feature-with-icon)
 
+## Usefull links
+
+- [Lucid icons](https://lucide.dev/icons/book-open-text)
+
 ## Tab Group & Tabs
 
 Creates an interactive tabbed interface with optional auto-switching functionality.
@@ -48,7 +52,7 @@ Creates an interactive tabbed interface with optional auto-switching functionali
 - Provide meaningful content within each tab
 - Don't use (`duration`) prop so tabs won't switch automatically
 
-## Featured Checklist
+## Photo Checklist
 
 Creates a visually appealing checklist with an optional image.
 
