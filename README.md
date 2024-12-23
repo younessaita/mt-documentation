@@ -38,6 +38,7 @@ Creates an interactive tabbed interface with optional auto-switching functionali
     </Tab>
 </TabGroup>
 ```
+------
 
 ### FeaturedChecklist
 
@@ -60,6 +61,8 @@ Creates a checklist with optional image, title, and call-to-action.
     * Feature 2
 </FeaturedChecklist>
 ```
+
+------
 
 ### List
 
@@ -84,6 +87,8 @@ Creates a structured list with optional icons and descriptions.
 - keep a new empty line between list items
 - use `[ ]` to add an icon to a list item
 
+------
+
 ### FeatureWithImage
 
 Displays a feature section with image and descriptive content.
@@ -107,6 +112,7 @@ Displays a feature section with image and descriptive content.
 - keep a new empty line between list items
 - use `[ ]` to add an icon to a list item
 
+------
 
 ### Places & FeaturedPlace
 
@@ -129,6 +135,7 @@ Creates a grid layout of places/locations with featured items.
     * [/rome]Rome
 </Places>
 ```
+------
 
 ## Icon Usage
 - Components support [Lucide icons](https://lucide.dev/icons)
