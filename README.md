@@ -4,10 +4,11 @@ This documentation covers the available MDX components for rendering dynamic con
 
 ## Table of Contents
 
-- [Tab Group & Tabs](#tab-group--tabs)
-- [Photo Checklist](#photo-checklist)
+- [TabGroup & Tab](#tab-group--tabs)
+- [Featured Checklist](#FeaturedChecklist)
 - [List](#list)
-- [Feature With Icon](#feature-with-icon)
+- [Feature With Image](#featurewithimage)
+- [Places](#olaces)
 
 ## Usefull links
 
@@ -114,7 +115,7 @@ Displays a feature section with image and descriptive content.
 
 ------
 
-### Places & FeaturedPlace
+### Places
 
 Creates a grid layout of places/locations with featured items.
 
