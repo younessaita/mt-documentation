@@ -4,11 +4,11 @@ This documentation covers the available MDX components for rendering dynamic con
 
 ## Table of Contents
 
-- [TabGroup & Tab](#tabgroup--tabs)
+- [TabGroup & Tab](#tabs)
 - [Featured Checklist](#FeaturedChecklist)
 - [List](#list)
 - [Feature With Image](#featurewithimage)
-- [Places](#olaces)
+- [Places](#places)
 
 ## Usefull links
 
@@ -16,7 +16,7 @@ This documentation covers the available MDX components for rendering dynamic con
 
 ## Components
 
-### TabGroup & Tab
+### Tabs
 
 Creates an interactive tabbed interface with optional auto-switching functionality.
 
