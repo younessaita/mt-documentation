@@ -4,7 +4,7 @@ This documentation covers the available MDX components for rendering dynamic con
 
 ## Table of Contents
 
-- [TabGroup & Tab](#tab-group--tabs)
+- [TabGroup & Tab](#tabgroup--tabs)
 - [Featured Checklist](#FeaturedChecklist)
 - [List](#list)
 - [Feature With Image](#featurewithimage)
