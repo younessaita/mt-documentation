@@ -1,6 +1,6 @@
 # MDX Components Documentation
 
-This documentation covers the available MDX components and their usage. These components can be used directly in your MDX content.
+This documentation covers the available MDX components for rendering dynamic content.
 
 ## Table of Contents
 
@@ -13,128 +13,131 @@ This documentation covers the available MDX components and their usage. These co
 
 - <a href="https://lucide.dev/icons" target="_blank">Lucid icons</a>
 
-## Tab Group & Tabs
+## Components
+
+### TabGroup & Tab
 
 Creates an interactive tabbed interface with optional auto-switching functionality.
 
-### Props
-
-#### TabGroup
-
+#### TabGroup Props
 - `title` (string) - Main heading for the tab group
 - `subtitle` (string) - Descriptive text below the title
 - `duration` (number) - Time in seconds before switching to next tab automatically
-- `background` (boolean) - Enable dark background mode
+- `background` (boolean) - Enables dark background mode
 
-#### Tab
-
+#### Tab Props
 - `name` (string, required) - Tab label
 - `icon` (string) - Lucide icon name
 - `imageUrl` (string) - URL for tab's image
 
-### Example
-
 ```jsx
-<TabGroup title="Our Services" subtitle="Explore what we offer" duration={5}>
-    <Tab name="Design" icon="Palette" imageUrl="/images/showcase.jpg">
-        ## H2 Heading Professional interior design services tailored to your needs.
-    </Tab>
-    <Tab name="Consultation" icon="MessageCircle">
-        Expert consultation to bring your vision to life.
+<TabGroup title="Our Services" subtitle="Explore what we offer" duration={5} background={false}>
+    <Tab name="Design" icon="Palette" imageUrl="/images/design.jpg">
+        ## Design Services
+        Professional design services tailored to your needs.
     </Tab>
 </TabGroup>
 ```
 
-### Best Practices
+### FeaturedChecklist
 
-- Keep tab names concise
-- Use relevant icons to enhance visual hierarchy
-- Provide meaningful content within each tab
-- Don't use (`duration`) prop so tabs won't switch automatically
+Creates a checklist with optional image, title, and call-to-action.
 
-## Photo Checklist
-
-Creates a visually appealing checklist with an optional image.
-
-### Props
-
-- `imageUrl` (string) - URL of the featured image
+#### Props
+- `imageUrl` (string) - Featured image URL
 - `title` (string) - Main heading
 - `subtitle` (string) - Supporting text
 - `cta` (string) - Call-to-action button text
-- `ctaPlacement` (string) - Call-to-action button placement (left | center | right, default: left)
-- `link` (string) - CTA button destination URL
-- `cols` (number) - Number of columns (1-4, default: 2)
-- `background` (boolean) - Enable/disable background styling
-### Example
+- `link` (string) - CTA button destination URL (required if `cta` is set)
+- `cols` (number, 1-4) - Number of columns for checklist items
+- `theme` (string) - Visual theme ('dark' | 'light')
+- `ctaPlacement` (string) - CTA button position ('left' | 'center' | 'right')
+- `checkIcon` (string) - Default Lucide icon name for list items
 
 ```jsx
-<FeaturedChecklist imageUrl="/images/interior.jpg" title="Design Process" subtitle="Our comprehensive approach" cta="Start Your Project" link="/contact" cols={2}>
-    * Initial Consultation * Design Concept * Material Selection * Implementation
+<FeaturedChecklist imageUrl="/image.jpg" title="Features" subtitle="Key benefits" cta="Learn More" link="/features" cols={2} theme="dark">
+    * [CheckCircle] Feature 1
+    * Feature 2
 </FeaturedChecklist>
 ```
 
-## List
+### List
 
-Creates a structured list with titles and descriptions.
+Creates a structured list with optional icons and descriptions.
 
-### Props
-
+#### Props
 - `title` (string) - Main heading
 - `subtitle` (string) - Supporting text
-- `direction` ("vertical" | "horizontal", default: "vertical") - Layout direction
-- `cols` (number, 1-5, default: 2) - Number of columns
-
-### Example
+- `direction` (string) - Layout direction ('vertical' | 'horizontal')
+- `cols` (number, 1-5) - Number of columns
+- `hasIcon` (boolean) - Show/hide icons
+- `checkIcon` (string) - Default Lucide icon name
 
 ```jsx
-<List title="Our Process" subtitle="How we work with clients" direction="vertical" cols={2}>
-    * Initial Meeting: We discuss your vision and requirements. 
-    * Design Phase: Creating detailed plans and mockups. 
-    * Implementation: Bringing designs to life with precision.
+<List title="Process" subtitle="Our workflow" direction="vertical" cols={2}hasIcon={true}checkIcon="Check">
+    * [Heart] Planning: Initial planning phase
+
+    * Implementation: Execution phase
 </List>
 ```
+#### Notes
+- keep a new empty line between list items
+- use `[ ]` to add an icon to a list item
 
-### List format
+### FeatureWithImage
 
-- Each item must follow the format: `* Title: Description`
-- Use a colon to separate title from description
-- One item per line
-- Leave a blank line before and after the list
+Displays a feature section with image and descriptive content.
 
-## Feature With Icon
-
-Creates a feature section with icons and descriptions.
-
-### Props
-
+#### Props
 - `title` (string) - Main heading
 - `subtitle` (string) - Supporting text
-- `image` (string) - URL of the feature image
-- `theme` ("light" | "dark") - Color theme
-- `background` (boolean) - Enable/disable background styling
-
-### Example
+- `imageUrl` (string) - Feature image URL
+- `theme` (string) - Color theme ('dark' | 'light')
+- `className` (string) - Additional CSS classes
 
 ```jsx
-<FeatureWithIcon title="Our Expertise" subtitle="What sets us apart" image="/images/showcase.jpg" theme="light">
-    * [Brush] Design Excellence: Creating stunning spaces that inspire 
-    * [Shield] Quality Assurance: Premium materials and craftsmanship 
-    * [Clock] Timely Delivery: Meeting deadlines with precision
-</FeatureWithIcon>
+<FeatureWithImage title="Key Feature" subtitle="Description" imageUrl="/feature.jpg" theme="dark">
+    * [Utensils] Feature 1: Detailed description
+    
+    * Feature 2: Another description
+</FeatureWithImage>
 ```
 
-### List Format
+#### Notes
+- keep a new empty line between list items
+- use `[ ]` to add an icon to a list item
 
-- Each item must follow the format: `* [IconName]Title: Description`
-- Icon name must be a valid Lucide icon name in square brackets
-- Use a colon to separate title from description
-- One item per line
-- Leave a blank line before and after the list
 
-### Best Practices
+### Places & FeaturedPlace
 
-- Choose relevant icons that complement the content
-- Keep titles concise and descriptive
-- Provide detailed descriptions
-- Maintain consistent formatting across items
+Creates a grid layout of places/locations with featured items.
+
+#### Places Props
+- `title` (string) - Section title
+- `subtitle` (string) - Section subtitle
+
+#### FeaturedPlace Props
+- `title` (string) - Place title
+- `subtitle` (string) - Place description
+- `imageUrl` (string) - Place image URL
+- `url` (string) - Link destination
+
+```jsx
+<Places title="Destinations" subtitle="Popular locations">
+    <FeaturedPlace title="Paris"subtitle="City of Light" imageUrl="/paris.jpg" url="/destinations/paris" />
+    * [/london]London
+    * [/rome]Rome
+</Places>
+```
+
+## Icon Usage
+- Components support [Lucide icons](https://lucide.dev/icons)
+- Use icon names in square brackets: `[IconName]`
+- Icons can be specified for individual list items or as default props
+
+## Best Practices
+- Use descriptive titles and subtitles
+- Maintain consistent formatting in lists
+- you can use either slug or full url for `imageUrl` prop
+- in mobile all lists will be displayed in a single column
+- use path for `url` prop (e.g: `/destinations/marrakech`)
