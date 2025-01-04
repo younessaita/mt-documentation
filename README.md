@@ -9,6 +9,7 @@ This documentation covers the available MDX components for rendering dynamic con
 - [List](#list)
 - [Feature With Image](#featurewithimage)
 - [Places](#places)
+- [Long Content](#LongContent)
 
 ## Usefull links
 
@@ -137,6 +138,55 @@ Creates a grid layout of places/locations with featured items.
 </Places>
 ```
 ------
+
+## LongContent
+
+Creates a two-column layout with left side content (70%) and right side image (30%). Perfect for long-form content like articles or detailed descriptions.
+
+### Props
+
+- `title` (string) - Main heading for the content section
+- `subtitle` (string) - Descriptive text below the title
+- `imageUrl` (string) - URL for the featured image
+- `imageAlt` (string) - Alt text for the image
+  
+### Example
+
+```jsx
+
+<LongContent
+    title="On a mission to empower remote teams"
+    subtitle="Building better collaboration tools for the modern workplace"
+    imageUrl="/images/team-collaboration.jpg"
+    imageAlt="Team members collaborating remotely"
+>
+    ## Our Vision
+    
+    We believe in creating tools that make remote work more effective and enjoyable. 
+    Our platform is designed to break down barriers and foster collaboration across 
+    time zones and geographical boundaries.
+
+    ### Key Benefits
+
+    Remote work shouldn't mean disconnected work. Our tools bridge the gap between 
+    team members, creating a seamless experience that rivals in-person collaboration.
+
+    Through careful attention to user experience and performance, we've created a 
+    platform that feels natural and intuitive, while providing powerful features 
+    that remote teams need to succeed.
+</LongContent>
+
+```
+
+------
+
+### Best Practices
+
+- Keep content width reasonable for readability
+- Use Markdown headings for content structure
+- Provide high-quality images that complement the content
+- Use descriptive alt text for accessibility
+- Ensure image aspect ratio works well with the fixed height container
 
 ## Icon Usage
 - Components support [Lucide icons](https://lucide.dev/icons)
